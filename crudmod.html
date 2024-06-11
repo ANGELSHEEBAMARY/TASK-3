@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="crudmod.css">
+</head>
+<body onload="readAll()">
+    <div class="container">
+        <h2>KIDS SHOP DETAILS</h2>
+        <div class="form_container">
+            <form class="create_form">
+                <input type="text" placeholder="Enter frock code" class="frockcode">
+                <input type="text" placeholder="Enter frock name" class="frockname">
+                <input type="text" placeholder="Enter frock price" class="frockprice">
+                <button type="button" onclick="add()">CREATE</button>
+            </form>
+            <form class="update_form" style="display: none;">
+                <input type="text" hidden class="update_id">
+                <input type="text" placeholder="Enter frock code" class="frockcode">
+                <input type="text" placeholder="Enter frock name" class="frockname">
+                <input type="text" placeholder="Enter frock price" class="frockprice">
+                <button type="button" onclick="update()">UPDATE</button>
+            </form>
+            <button class="addbtn" onclick="createForm()">ADD +</button>
+            <br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Frock Code</th>
+                        <th>Frock Name</th>
+                        <th>Frock Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table_data"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./crudmod.js"></script>
+</body>
+</html>
